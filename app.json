@@ -1,0 +1,30 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/search/search",
+    "pages/detail/detail"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "排行",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "position":"bottom",
+    "backgroundColor":"#fff",
+    "selectedColor":"#09bb07",
+    "list":[
+      {
+        "pagePath":"pages/index/index",
+        "iconPath":"./img/hot.png",
+        "selectedIconPath":"./img/hot_on.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "iconPath": "./img/search.png",
+        "selectedIconPath": "./img/search_on.png"
+      }
+    ]
+  }
+}

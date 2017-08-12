@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="ImgBox">
+   <swiper indicator-dots="true" autoplay="{{true}}" interval="5000" duration="500" circular="true">
+  <block wx:for="{{imglist}}">
+    <swiper-item>
+      <image src="{{item.albumpic_big}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+<view class="songselect">
+  <view class="title" bindtap="changeShow"><text>{{title}}</text></view>
+  <view class="slectore" wx:if="{{isShow}}">
+    <button size="default" type="default" wx:for="{{slectlist}}" data-index="{{item.value}}" data-name="{{item.name}}" bindtap="change">{{item.name}}</button>
+  </view>
+  <view class="songItem"  wx:for="{{showlist}}" data-songurl="{{item.url}}" data-songid="{{item.albumid}}" data-name="{{item.songname}}" data-time="{{item.seconds}}" data-bImg="{{item.albumpic_big}}" data-sImg="{{item.albumpic_small}}" data-songer="{{item.singername}}" data-index="{{index}}" bindtap="goToListen">
+    <view class="imgTitle">
+    <image mode="widthFix" class="smallImg" src="{{item.albumpic_small}}"></image>
+    </view>
+    <view class="textTitle">
+    <view><text class="songName" selectable="false">{{item.songname}}\n</text></view>
+    <view><text class="songerName" selectable="false">{{item.singername}}</text></view> 
+    </view> 
+  </view>
+</view>

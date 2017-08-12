@@ -1,0 +1,21 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail">
+<view class="header"> 
+  <view class="imgbox">
+  <image mode="widthFix" src="{{bimg}}"></image>
+  </view>
+  <view class="titletext">
+  <view class="name"><text>{{songname}}</text></view>
+  <view class="singer"><text>{{author}}</text></view>
+  </view>
+  <view class="button-bar">
+   <view class="button prev" bindtap="upSong"></view>
+  <view class="button {{playclass}}" bindtap="playPause"></view>
+  <view class="button next" bindtap="downSong"></view>
+  </view>
+ 
+  <progress stroke-width="3" percent="{{percent}}" color="#09bb07"/>
+</view>
+</view>
+
+<audio id="myAudio" src="{{url}}"></audio>
